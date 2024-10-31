@@ -7,7 +7,7 @@ package lv.rvt;
             printTriangle(4);
 
             System.out.println("part: 2");
-            christmasTree(4);sss
+            christmasTree(4);
 
             System.out.println("part: 3");
                 printRectangle(17, 3);
