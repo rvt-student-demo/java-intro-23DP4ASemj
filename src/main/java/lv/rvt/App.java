@@ -1,46 +1,43 @@
 package lv.rvt;
 
-import java.util.*;
+    public class App{
+        public class Main {
+            public static void main(String[] args) {
+            System.out.println("part: 1");
+            printTriangle(4);
 
-public class App
-{
-public static void main( String[] args )
-{
-    Scanner reader = new Scanner(System.in);
+            System.out.println("part: 2");
+            christmasTree(4);sss
 
-    System.out.print("Write numbers:  ");
-    int sum = 0;
-    int Numbers = 0;
-    int average = 0;
-    int odd = 0;
-    int even = 0;
-    while (true) {
-        int input = Integer.valueOf(reader.nextLine());
+            System.out.println("part: 3");
+                printRectangle(17, 3);
 
-        if (input == 0) {
-            break;
-        }
-       else {
-            Numbers++;
-        }
-        if (input % 2 == 0) {
-            odd++;
-        }
-        else {
-            even++;
-        }
-        
-        average = sum/Numbers;
-        sum += input;
-        Numbers++;
+            System.out.println("part: 4");
+            printTriangle(4);
+
+            }
+    public static void printSquare(int size) {
+    for (int i = 0; i < size; i++) {
+        printStars(size);
+}
+    }   
+    public static void printStars(int n) {
+    for (int i = 0; i < n; i++) {
+        System.out.print("*");
     }
-    System.out.println("Thx! Bye!");
-    System.out.println("Sum: " + sum);
-    System.out.println("Numbers: " + Numbers);
-    System.out.println("Average: " + average);
-    System.out.println("Even: " + even);
-    System.out.println("Odd: " + odd);
+    System.out.println();
+    }
 
+    public static void printRectangle(int width, int height) {
+        for (int i = 0; i < height; i++) {
+            printStars(width);
+    }
+    }
 
-} 
+    public static void printTriangle(int size) {
+        for (int i = 1; i <= size; i++) {
+            printStars(i);
+        }
+    }
+}
 }
