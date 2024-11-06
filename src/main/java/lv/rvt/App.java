@@ -5,30 +5,20 @@ import java.util.Scanner;
 public class App{
         public static void main (String[] args) {
 
-        Scanner reader = new Scanner(System.in);
-        int sum = 0;
-        int birth = 0;
-        String name = "";
+            Account artosAccount = new Account("Arto's account", 100.00);
+            Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
             
-        while (true) {
-            String input = reader.nextLine();
-            if (input.equals("")) {
-                break;
-            }
+            System.out.println("Initial state");
+            System.out.println(artosAccount);
+            System.out.println(artosSwissAccount);
+            artosAccount.withdraw(20);
+            System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+            artosSwissAccount.deposit(200);
+            System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
             
-            String[] parts = input.split(",");
-            sum = sum + Integer.valueOf(parts[0]);
-            birth = birth + 1;
-        }
-
-        System.out.println("Longest name: " + name );
-
-        if (birth > 0) {
-            System.out.println("Average of the birth years: " + (1.0 * sum / birth));
-        } 
-        else {
-            System.out.println("No input.");
-        }
+            System.out.println("End state");
+            System.out.println(artosAccount);
+            System.out.println(artosSwissAccount);
             
         
     }
