@@ -1,4 +1,4 @@
-import lv.rvt;
+package lv.rvt;
 
 public class Student extends Person
 {
