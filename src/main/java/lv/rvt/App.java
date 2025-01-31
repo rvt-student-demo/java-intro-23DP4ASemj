@@ -1,26 +1,36 @@
 package lv.rvt;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
-public class App{
-        public static void main (String[] args) {
-
-            Account artosAccount = new Account("Arto's account", 100.00);
-            Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
-            
-            System.out.println("Initial state");
-            System.out.println(artosAccount);
-            System.out.println(artosSwissAccount);
-            artosAccount.withdraw(20);
-            System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
-            artosSwissAccount.deposit(200);
-            System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
-            
-            System.out.println("End state");
-            System.out.println(artosAccount);
-            System.out.println(artosSwissAccount);
-            
-        
+    public class App {
+        public static void main(String[] args) {
+            Teacher ada = new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200);
+            Teacher esko = new Teacher("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
+    
+            System.out.println(ada);
+            System.out.println(esko);
+    
+            Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+            System.out.println(ollie);
+    
+            int i = 0;
+            while (i < 25) {
+                ollie.study();
+                i++;
+            }
+    
+            System.out.println(ollie);
+    
+            ArrayList<Person> persons = new ArrayList<>();
+            persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+            persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+    
+            printPersons(persons);
+        }
+    
+        public static void printPersons(ArrayList<Person> persons) {
+            for (Person person : persons) {
+                System.out.println(person);
+            }
+        }
     }
-}
-            
