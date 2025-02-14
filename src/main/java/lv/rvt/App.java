@@ -1,36 +1,18 @@
 package lv.rvt;
 
-import java.util.ArrayList;
+    public class App{
+        public static void main(String[] args){
+            Box box = new Box(10);
 
-    public class App {
-        public static void main(String[] args) {
-            Teacher ada = new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200);
-            Teacher esko = new Teacher("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
-    
-            System.out.println(ada);
-            System.out.println(esko);
-    
-            Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
-            System.out.println(ollie);
-    
-            int i = 0;
-            while (i < 25) {
-                ollie.study();
-                i++;
-            }
-    
-            System.out.println(ollie);
-    
-            ArrayList<Person> persons = new ArrayList<>();
-            persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
-            persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
-    
-            printPersons(persons);
-        }
-    
-        public static void printPersons(ArrayList<Person> persons) {
-            for (Person person : persons) {
-                System.out.println(person);
-            }
-        }
+            box.add(new Book("Fyodor Dostoevsky", "Crime and Punishment", 2)) ;
+            box.add(new Book("Robert Martin", "Clean Code", 1));
+            box.add(new Book("Kent Beck", "Test Driven Development", 0.7));
+        
+            box.add(new CD("Pink Floyd", "Dark Side of the Moon", 1973));
+            box.add(new CD("Wigwam", "Nuclear Nightclub", 1975));
+            box.add(new CD("Rendezvous Park", "Closer to Being Here", 2012));
+
+            System.out.println(box);
+                }
     }
+
